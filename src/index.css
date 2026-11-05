@@ -1,0 +1,49 @@
+@import 'tailwindcss';
+
+@font-face { font-family: 'Satoshi'; src: url('/fonts/satoshi-400.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/satoshi-500.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Satoshi'; src: url('/fonts/satoshi-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('/fonts/inter-700.woff2') format('woff2'); font-weight: 700; font-display: swap; }
+
+/* Brand palette: the only four colors used. Gold never carries small text on ivory (2.1:1); use it
+   as a fill behind charcoal text (7.3:1) or as text on charcoal. */
+@theme {
+  --color-charcoal: #1c1c1e;
+  --color-gold: #c5a46d;
+  --color-ivory: #f7f5f0;
+  --color-slate: #66686d;
+  --font-sans: 'Satoshi', 'Helvetica Neue', Arial, sans-serif;
+  --font-logo: 'Inter', 'Satoshi', sans-serif;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-ivory text-charcoal font-sans font-medium antialiased; letter-spacing: -0.03em; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-gold; }
+  ::selection { @apply bg-gold text-charcoal; }
+}
+
+/* Scroll reveal: Layout marks [data-reveal] elements [data-shown] as they enter the viewport.
+   Siblings in a grid stagger slightly. */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+[data-reveal][data-shown] { opacity: 1; transform: none; }
+/* stagger grid siblings, including cards wrapped in a single-child link/div */
+[data-reveal]:nth-child(2), :nth-child(2) > [data-reveal]:only-child { transition-delay: 0.1s; }
+[data-reveal]:nth-child(3), :nth-child(3) > [data-reveal]:only-child { transition-delay: 0.2s; }
+[data-reveal]:nth-child(4), :nth-child(4) > [data-reveal]:only-child { transition-delay: 0.3s; }
+
+/* Hero entrance on page load. */
+@keyframes rise { from { opacity: 0; transform: translateY(32px); } }
+@keyframes zoom-out { from { transform: scale(1.08); } }
+.hero-rise { animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0s); }
+.hero-zoom { animation: zoom-out 1.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  [data-reveal] { opacity: 1; transform: none; transition: none; }
+  .hero-rise, .hero-zoom { animation: none; }
+}

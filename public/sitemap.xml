@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PLACEHOLDER: replace __DOMAIN__ with the live domain -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>__DOMAIN__/</loc></url>
+  <url><loc>__DOMAIN__/about/</loc></url>
+  <url><loc>__DOMAIN__/track-record/</loc></url>
+  <url><loc>__DOMAIN__/case-studies/</loc></url>
+  <url><loc>__DOMAIN__/what-we-do/</loc></url>
+  <url><loc>__DOMAIN__/investment-approach/</loc></url>
+  <url><loc>__DOMAIN__/partner-with-us/</loc></url>
+  <url><loc>__DOMAIN__/buyers-list/</loc></url>
+  <url><loc>__DOMAIN__/contact/</loc></url>
+  <url><loc>__DOMAIN__/privacy-policy/</loc></url>
+</urlset>

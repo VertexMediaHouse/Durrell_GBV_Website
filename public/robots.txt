@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# PLACEHOLDER: replace __DOMAIN__ with the live domain
+Sitemap: __DOMAIN__/sitemap.xml

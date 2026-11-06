@@ -6,7 +6,8 @@ import { Button, Container, Eyebrow, Icon, Lead } from './ui'
 const NAV = PAGES.filter((p) => !['/contact', '/privacy-policy'].includes(p.path))
 
 const Logo = () => (
-  <Link to="/" className="font-logo text-[22px] font-bold whitespace-nowrap tracking-[-0.02em] text-ivory md:text-[26px]">
+  <Link to="/" className="flex items-center gap-3 font-logo text-[22px] font-bold whitespace-nowrap tracking-[-0.02em] text-ivory md:text-[26px]">
+    <img src="/images/logo-mark.png" alt="" width="40" height="48" className="h-10 w-auto md:h-12" />
     {BRAND}
   </Link>
 )
@@ -21,10 +22,17 @@ function Header() {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
+  const [scrolled, setScrolled] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 10)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   return (
-    <header className="absolute inset-x-2 top-2 z-30">
-      <Container className="flex items-center justify-between gap-4 py-5 md:py-6">
+    <header className="fixed inset-x-2 top-2 z-30">
+      <Container className={`flex items-center justify-between gap-4 rounded-full transition-[padding,background-color] duration-300 ${scrolled ? 'bg-charcoal/85 py-2 shadow-lg backdrop-blur-md' : 'py-5 md:py-6'}`}>
         <Logo />
         <nav aria-label="Main" className="hidden rounded-full border border-ivory/25 bg-ivory/10 p-1 backdrop-blur-md min-[1360px]:block">
           <ul className="flex">
@@ -139,7 +147,7 @@ function Footer() {
       <Container>
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div>
-            <Logo />
+            <Link to="/"><img src="/images/logo.png" alt={BRAND} width="160" height="169" className="h-auto w-40" /></Link>
             <Lead className="mt-4 max-w-xs">Real estate investment based in Jacksonville, FL. Building wealth, creating opportunity, leaving a legacy.</Lead>
           </div>
           {FOOTER_COLS.map(([title, paths]) => (

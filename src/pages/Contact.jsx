@@ -25,7 +25,7 @@ export default function Contact() {
         eyebrow="Contact"
         title="Let's talk about your next deal."
         intro="Selling a property, looking to invest, or interested in partnering? Send us a message."
-        image="/images/hero-handshake.jpg"
+        image="/images/hero-contact.jpg"
       />
 
       <Section>

@@ -32,7 +32,7 @@ export default function TrackRecord() {
         eyebrow="Track Record"
         title="Completed deals. Clear roles."
         intro="Every deal below states GBV's actual role: buyer, seller, lender or partner."
-        image="/images/hero-interior.jpg"
+        image="/images/hero-track-record.jpg"
       >
         <Button to="/case-studies">See the Case Studies</Button>
       </PageHero>

@@ -23,7 +23,7 @@ export default function BuyersList() {
         eyebrow="Buyers List"
         title="Hear about new deals first."
         intro="Join the GBV Legacy Group buyers list. Tell us what you buy, and we'll send you deals that match."
-        image="/images/hero-handshake.jpg"
+        image="/images/hero-buyers.jpg"
       />
 
       <Section>

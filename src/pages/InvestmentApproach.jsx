@@ -30,13 +30,14 @@ export default function InvestmentApproach() {
       </Section>
 
       <Section>
-        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-2">
           <div data-reveal>
             <Eyebrow>Underwriting</Eyebrow>
             <H2>What we check before we commit.</H2>
             <Lead className="mt-5 max-w-md">Every deal is reviewed against the same checklist. If it doesn't pass, we don't buy it.</Lead>
             <Photo src="/images/photos/approach.jpg" alt="Modern home at dusk" className="mt-8 aspect-[16/10]" />
           </div>
+          <div className="flex flex-col gap-5">
           <Card className="p-6 md:p-8">
             <CheckList
               items={[
@@ -49,6 +50,15 @@ export default function InvestmentApproach() {
               ]}
             />
           </Card>
+          <div data-reveal className="dark-panel flex flex-1 flex-col justify-between gap-8 rounded-2xl bg-charcoal p-6 text-ivory md:p-8">
+            <div>
+              <Eyebrow>Our Rule</Eyebrow>
+              <p className="text-2xl leading-tight font-bold md:text-3xl">One failed check is enough to walk away.</p>
+              <Lead className="mt-4 max-w-md">We pass on far more deals than we buy. That discipline is what protects our partners' capital.</Lead>
+            </div>
+            <div><Button to="/partner-with-us">Partner With GBV</Button></div>
+          </div>
+          </div>
         </div>
       </Section>
 

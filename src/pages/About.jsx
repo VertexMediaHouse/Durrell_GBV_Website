@@ -9,7 +9,7 @@ export default function About() {
         eyebrow="About"
         title="Experience you can build on."
         intro="GBV Legacy Group is a real estate investment company based in Jacksonville, FL, focused on deals that build wealth for the long term."
-        image="/images/hero-handshake.jpg"
+        image="/images/hero-about.jpg"
       >
         <Button to="/track-record">See Our Track Record</Button>
       </PageHero>

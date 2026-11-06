@@ -52,7 +52,7 @@ export default function Legal() {
         eyebrow="Privacy Policy & Terms"
         title="Your trust, our commitment."
         intro="How we handle your information, and the terms for using this website."
-        image="/images/hero-handshake.jpg"
+        image="/images/hero-legal.jpg"
       >
         <a href="#privacy" className="rounded-full border border-ivory/70 px-4 py-2 font-bold hover:bg-ivory/10">Privacy Policy</a>
         <a href="#terms" className="rounded-full border border-ivory/70 px-4 py-2 font-bold hover:bg-ivory/10">Terms of Use</a>

@@ -35,7 +35,7 @@ export default function WhatWeDo() {
         eyebrow="What We Do"
         title="Buying, selling and partnering."
         intro="Three ways we create opportunity in real estate, all built on the same disciplined approach."
-        image="/images/hero-living.jpg"
+        image="/images/hero-what-we-do.jpg"
       >
         <Button to="/investment-approach">Our Investment Approach</Button>
       </PageHero>

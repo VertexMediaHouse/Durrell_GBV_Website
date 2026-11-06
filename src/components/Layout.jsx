@@ -177,6 +177,10 @@ function Footer() {
             <Link to="/privacy-policy" className="hover:text-ivory">Privacy Policy</Link>
             <Link to="/privacy-policy#terms" className="hover:text-ivory">Terms</Link>
           </div>
+          <p>
+            Made by{' '}
+            <a href="https://vertextechhouse.com" target="_blank" rel="noopener" className="text-ivory hover:text-gold">Vertex Tech House</a>
+          </p>
         </div>
       </Container>
     </footer>
